@@ -1,1 +1,55 @@
-<p>cart works!</p>
+<ng-container *ngIf="true">
+  <div class="card-table">
+    <div class="cart-product">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th>Sr.No</th>
+            <th>Product Name</th>
+            <th>Product Image</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <td>1</td>
+          <td>Iphone</td>
+          <td>any image</td>
+          <td>this is sudha phone</td>
+          <td>26,000</td>
+          <td>56,000</td>
+          <td>
+            <button
+              style="
+                color: rgb(247, 90, 90);
+                border-radius: 0.5rem;
+                border: none;
+              "
+            >
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="false">
+  <div class="container">
+    <div class="card">
+      <h5 class="card-title">My Cart</h5>
+    </div>
+    <div class="center">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdVgVthuk6JYE41ANXAnFN7MZRrFJSziivNQ&usqp=CAU"
+        alt=""
+      />
+      <h4>Your cart is empty!</h4>
+      <h6>Add item to it now</h6>
+      <div class="btn btn-primary">Shop Now</div>
+    </div>
+  </div>
+</ng-container>
