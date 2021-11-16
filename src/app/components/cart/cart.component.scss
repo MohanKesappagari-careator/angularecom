@@ -10,4 +10,23 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+  .btn {
+    font-size: 1rem !important;
+    margin-top: 1.2rem !important;
+    font-weight: 400;
+    padding: 0.9rem 5rem;
+    border-radius: 0.4rem !important;
+  }
+}
+.card-table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
 }

@@ -1,43 +1,59 @@
-<ng-container *ngIf="true">
-  <div class="card-table">
-    <div class="cart-product">
-      <table class="table table-responsive">
-        <thead>
-          <tr>
-            <th>Sr.No</th>
-            <th>Product Name</th>
-            <th>Product Image</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Total</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <td>1</td>
-          <td>Iphone</td>
-          <td>any image</td>
-          <td>this is sudha phone</td>
-          <td>26,000</td>
-          <td>56,000</td>
-          <td>
-            <button
-              style="
-                color: rgb(247, 90, 90);
-                border-radius: 0.5rem;
-                border: none;
-              "
-            >
-              <i class="fas fa-trash-alt"></i>
-            </button>
-          </td>
-        </tbody>
-      </table>
+<ng-container *ngIf="product.length !== 0">
+  <div class="container">
+    <div class="card-table">
+      <div class="cart-product">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th>Sr.No</th>
+              <th>Product Name</th>
+              <th>Product Image</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of product; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.title }}</td>
+              <td><img style="width: 5rem" src="{{ item.image }}" alt="" /></td>
+              <td style="width: 25%">{{ item.description }}</td>
+              <td style="width: 15%">{{ item.price }}</td>
+              <td style="width: 15%">{{ item.quantity }}</td>
+              <td style="width: 15%">{{ item.total }}</td>
+              <td>
+                <button
+                  (click)="removeItem(item)"
+                  style="
+                    color: rgb(247, 90, 90);
+                    border-radius: 0.5rem;
+                    border: none;
+                  "
+                >
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td><button class="btn btn-danger">Empty Cart</button></td>
+              <td><button class="btn btn-primary">ShopMore</button></td>
+              <td><button class="btn btn-success">Checkout</button></td>
+              <td>
+                <strong>GrandTotal:&#8377;{{ gtotal }}</strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </ng-container>
 
-<ng-container *ngIf="false">
+<ng-container *ngIf="product.length === 0">
   <div class="container">
     <div class="card">
       <h5 class="card-title">My Cart</h5>
@@ -49,7 +65,7 @@
       />
       <h4>Your cart is empty!</h4>
       <h6>Add item to it now</h6>
-      <div class="btn btn-primary">Shop Now</div>
+      <button routerLink="/products" class="btn btn-primary">Shop Now</button>
     </div>
   </div>
 </ng-container>

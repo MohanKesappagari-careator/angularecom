@@ -65,7 +65,9 @@
           {{ item.description }}
         </p>
         <p><strong>Price:</strong>&#8377;{{ item.price }}</p>
-        <button class="btn btn-primary">Add to Cart</button>
+        <button class="btn btn-primary" (click)="addtoCart(item)">
+          Add to Cart
+        </button>
       </div>
     </ng-container>
   </div>

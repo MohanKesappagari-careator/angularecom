@@ -1,7 +1,10 @@
 <header>
   <div class="navbar navbar-dark bg-primary shadow-sm">
     <div class="navbar-brand align-item-center d-flex">
-      <i style="font-size: 40px" class="fas fa-shipping-fast"
+      <i
+        routerLink="products"
+        style="font-size: 40px"
+        class="fas fa-shipping-fast"
         >&nbsp;
         <strong style="font-size: 30px">Kart</strong>
       </i>
@@ -10,9 +13,9 @@
       </div>
       <span class="fas fa-search search-icon"></span>
     </div>
-    <div class="btn btn-primary">
+    <button routerLink="cart" class="btn btn-primary">
       <i style="font-size: 30px" class="fas fa-cart-plus"></i>
-      <div style="font-size: 1opx" class="badge bg-danger">5</div>
-    </div>
+      <div style="font-size: 1opx" class="badge bg-danger">{{ total }}</div>
+    </button>
   </div>
 </header>
